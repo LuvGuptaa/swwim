@@ -142,6 +142,7 @@ header{
     font-size:.875rem;
     line-height:1.25rem;
     font-weight: 600;
+    z-index: 1000;
     
 }
 .ml{
@@ -217,7 +218,7 @@ header{
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
     right: -100%;
@@ -370,7 +371,7 @@ header{
     width: 33%;
 }
 .sunglass{
-    max-height: 128px;
+    
     width: 29vw;
     height: 7.8vw;
     display: block;
@@ -378,20 +379,73 @@ header{
     background-color: rgba(13,60,136,1);
     z-index: 10;
     right: 1.5rem;
-    top: -635px;
-    left: 1000px;
-    position: relative;
+    top: -42vw;
+    left: 65vw;
+    position: absolute;
     display: inline-block;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .5s;
-    transition-property: opacity;
-    opacity: 1;
+    
     
 }
 .sunglass p{
     font-size: 1.6vw;
     line-height: 1.25;
     font-weight: 500;
-    padding-top: 1.25rem;
+    padding-top: 1.8vw;
     font-style:  Greycliff,Arial,sans-serif;
+}
+.flag{
+    position: relative;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    display: block;
+    font-size:1.125rem;
+    line-height:1.75rem;
+    font-weight: 500;
+    width: 33%;
+}
+.givenchy{
+    display: block;
+    position: absolute;
+    z-index: 50;
+    top: -20vw;
+    width: 28w;
+    height: 18.5vw;
+    
+}
+@media(max-width: 620px){
+    .desc{
+        animation-duration: .5s;
+        animation-fill-mode: both;
+    }
+        .fadeoutleft {
+            animation-name: fadeoutleft;
+        }
+        @keyframes fadeoutleft {
+            from { opacity: 1 }
+            to {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+        .contact{
+            display: none;
+        }
+        .delivery, .floats, .campaigns, .creative{
+            text-align: center;
+        }
+        .menu{
+            width: 90%;
+        }
+        .sunglass{
+            display: none;
+        }
+        .givenchy{
+            display: none;
+        }
+    }
+@media(max-width: 510px){
+    .desc{
+        display: none;
+    }
 }
