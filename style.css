@@ -54,7 +54,7 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji
+    font-family: Greycliff,Arial,sans-serif;
 }
 svg,
 img{
@@ -72,6 +72,7 @@ header{
 .noise{
     position:sticky;
     z-index: 1000;
+    top: -20px;
 }
 .noise:before {
     content:" ";
@@ -96,10 +97,12 @@ header{
     transition-property:all;
     transition-timing-function:cubic-bezier(.4,0,.2,1);
     transition-duration:.5s;
-    height: 140px;
+    height: 100px;
 }
 .container{
+    margin-top: 20px;
     width: 100%;
+    position: sticky;
 }
 .main_nav{
     display: flex;
@@ -141,7 +144,7 @@ header{
 .desc{
     font-size:.875rem;
     line-height:1.25rem;
-    font-weight: 600;
+    font-weight: 400;
     z-index: 1000;
     
 }
@@ -158,10 +161,10 @@ header{
     border-radius: 9999px;
     text-align: center;
     font-weight: 700;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: .65rem;
+    padding-bottom: .65rem;
     display: inline-block;
     position: relative;
     z-index: 0;
@@ -205,6 +208,9 @@ header{
 .contact:visited{
     color: rgba(22,88,179,1);
 }
+.contact:hover:visited{
+    color: white;
+}
 .menulist{
     
     align-items: center;
@@ -217,7 +223,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 80%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -258,8 +264,6 @@ header{
 #check:checked ~ .menu {right: 0;}
 
 
-
-
 .menu li {
     padding-left: 30px;
     color: rgb(229, 231, 235);
@@ -297,7 +301,7 @@ header{
 .hero{
     background-color: rgba(22,88,179,1);
     color: white;
-    padding-top: 1rem;
+    padding-top: 5rem;
 }
 .container{
     max-width: 1500px;
@@ -325,14 +329,49 @@ header{
     overflow: hidden;
 }
 .creative{
-    display: block;
+    display: inline-block;
     font-family:Baton Turbo,Arial,sans-serif;
     text-transform: uppercase;
     font-size: 10.5vw;
     line-height: 1;
     font-weight: 700;
     position: relative;
+    height: 10.5vw;
 }
+.create img{
+    position: absolute;
+    display: inline-block;
+    z-index: 100;
+    top: 10vw;
+    left: 48vw;
+    height: 18.2vw;
+    width: 18.8vw;
+    animation-name: wiggle;
+    animation-duration: 4.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes wiggle {
+    0% {
+     transform:rotate(0deg)
+    }
+    20% {
+     transform:rotate(4deg)
+    }
+    40% {
+     transform:rotate(-4deg)
+    }
+    60% {
+     transform:rotate(4deg)
+    }
+    80% {
+     transform:rotate(-4deg)
+    }
+    to {
+     transform:rotate(4deg)
+    }
+   }
 .camp{
     overflow: hidden;
 }
@@ -376,7 +415,6 @@ header{
     height: 7.8vw;
     display: block;
     margin-top: 11px;
-    background-color: rgba(13,60,136,1);
     z-index: 10;
     right: 1.5rem;
     top: -42vw;
@@ -413,6 +451,435 @@ header{
     height: 18.5vw;
     
 }
+.dude{
+    position: relative;
+    height: 135vw;
+    width: 100vw;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: white;
+    margin-top: 2rem;
+}
+.good{
+    display: inline-block;
+    margin-bottom: 5rem;
+    top: 15vw;
+    left: 10vw;
+    position: absolute;
+}
+.welcome{
+    
+    font-size:1.125rem;
+    line-height:1.75rem;
+    display: flex;
+    font-weight: 700;
+    margin-bottom: .75rem;
+    
+}
+@keyframes letterBounce {
+    0% {
+     transform:translateY(3px) rotate(-9deg)
+    }
+    50% {
+     transform:translatey(-3px) rotate(-9deg)
+    }
+    to {
+     transform:translateY(3px) rotate(-9deg)
+    }
+}
+.wel-d{
+    display: inline-block;
+    animation-name: letterBounce;
+    animation-duration: 4.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+}
+.wel{
+    display: inline-block;
+    animation-name: letterBounce;
+    animation-duration: 4.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.goodtxt{
+    position: relative;
+    
+    width: 45vw;
+    height: 53vw;
+}
+.goodtxt h1{
+    text-transform: uppercase;
+    font-family:Baton Turbo,Arial,sans-serif;
+    display: block;
+    font-size:2.25rem;
+    line-height:2.5rem;
+    padding-right: 3rem;
+    z-index: 10;
+    font-weight: 700;
+    position: relative;
+}
+.sketch{
+    position: absolute;
+    top: 2vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    width: 33.75vw;
+    
+}
+.goodtxt p{
+    font-size:1.125rem;
+    line-height:1.75rem;
+    opacity: .7;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+}
+.sleep{
+    position: absolute;
+    right: 10vw;
+    height: 35vw;
+    width: 30vw;
+    top: 15vw;
+}
+.cup2{
+    position: absolute;
+    height: 33vw;
+    width: 29vw;
+    top: 82vh;
+    left: 18vw;
+}
+.nurse{
+    position: absolute;
+    height: 38vw;
+    width: 29vw;
+    top: 60vw;
+    left: 60vw;
+}
+
+.jsswim{
+    position: absolute;
+    height: 29vw;
+    width: 29vw;
+    animation-name: rotating;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+}
+@keyframes rotating{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.just{
+    height: 29vw;
+    width: 29vw;
+    top: 70.7vw;
+    left: 32.7vw;
+    position: absolute;
+}
+.swwim{
+    position: absolute;
+    height: 12.5vw;
+    width: 12.5vw;
+    top: 8vw;
+    left: 8.5vw;
+}
+.just:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all .5s ease-in-out;
+}
+.bruh{
+    position: relative;
+    height: 120vw;
+    width: 100vw;
+    margin-top: 2rem;
+    background-color: white;
+    color: rgb(22, 88, 179);
+    z-index: 10;
+    
+}
+.flow{
+    padding-top: 8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.serve h2{
+    font-size: 3rem;
+    line-height: 1;
+    font-family: Baton Turbo,Arial,sans-serif;
+    font-weight: 710;
+    text-transform: uppercase;
+}
+.offer{
+    font-weight: 700;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+}
+.dash{
+    margin-left: .5rem;
+    opacity: .7;
+}
+.serve{
+    margin-bottom: 4rem;
+}
+.chart{
+    position: relative;
+
+}
+.cont{
+    border-top-style: solid;
+    border-color: rgb(22, 88, 179);
+    border-top-width: 1px;
+    z-index: 10;
+}
+.listhead{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.wiggle{
+    width: 2.5rem;
+    line-height: 1.5rem;
+    margin-top: .75rem;
+    margin-right: 1.25rem;
+}
+.cont:hover label{
+    opacity: .5;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+.cont:hover .wiggle{
+    animation-name: wiggly;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes wiggly {
+    0% {
+     transform:rotate(0deg)
+    }
+    20% {
+     transform:rotate(4deg)
+    }
+    40% {
+     transform:rotate(-4deg)
+    }
+    60% {
+     transform:rotate(4deg)
+    }
+    80% {
+     transform:rotate(-4deg)
+    }
+    to {
+     transform:rotate(4deg)
+    }
+   }
+.number{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    width: 25%;
+    margin-top: -.25rem;
+    font-weight: 710;
+    padding-right: 10rem;
+    display: block;
+    -webkit-text-stroke-width: 1.25px;
+    -webkit-text-fill-color: transparent;
+}
+.accordian li{
+    list-style: none;
+    cursor: pointer;
+}
+.accordian li label{
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    line-height: 2.5rem;
+    font-weight: 700.01;
+    cursor: pointer;
+    font-family: Baton Turbo,Arial,sans-serif;
+    
+}
+input[type="checkbox"]{
+    display: none;
+}
+.cont4{
+    border-bottom-style: solid;
+    border-bottom-color: rgb(22, 88, 179);
+    border-bottom-width: 1px;
+}
+.accordian .content{
+    width: 66.666667%;
+    margin-left: 25.2vw;
+    font-weight: 100;
+    word-spacing: .3rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    max-width: 42rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+.close-accord{
+    width: 1.5rem;
+    height: 1.7rem;
+    margin-top: .5rem;
+    margin-left: 2.75rem;
+    transition: transform .5s;
+}
+.close-accord2{
+    width: 1.8rem;
+    height: 2rem;
+    margin-top: .5rem;
+    margin-left: 2.75rem;
+    transition: transform .5s;
+}
+.close-accord3{
+    width: 1.6rem;
+    height: 1.8rem;
+    margin-top: .5rem;
+    margin-left: 2.75rem;
+    transition: transform .5s;
+}
+.close-accord4{
+    width: 1.9rem;
+    height: 2.1rem;
+    margin-top: .5rem;
+    margin-left: 11.5rem;
+    transition: transform .5s;
+}
+#first:checked ~ .content {
+    max-height: 200px;
+}
+#first:checked ~ .close-accord {
+    transform: rotate(45deg);
+}
+#second:checked ~ .close-accord2 {
+    transform: rotate(45deg);
+}#third:checked ~ .close-accord3 {
+    transform: rotate(45deg);
+}#fourth:checked ~ .close-accord4 {
+    transform: rotate(45deg);
+}
+
+.luv{
+    display: flex;
+    justify-content: center;
+    font-family: Baton Turbo,Arial,sans-serif;
+    margin-top: 3rem;
+    position: relative;
+    bottom: 0;
+    z-index: 0;
+}
+.luv a{
+    padding-left: .2rem;
+    padding-right: .2rem;
+    color: rgb(22, 88, 179);
+}
+@media(max-width: 768px){
+    .cup2{
+        display: none;
+    }
+    .sketch{
+        width: 58.221vw;
+        top: 3vw;
+    }
+    .just{
+        transform: scale(1.4);
+        top: 90vw;
+    }
+    .just:hover{
+        transform: scale(1.6);
+        transition: all .5s ease-in-out;
+    }
+    .good{
+        position: absolute;
+        left: 4vw;
+        width: 83vw;
+        height: 32vw;
+    }
+    .good, .goodtxt{
+        width: 83vw;
+        height: 32vw;
+    }
+    .welcome{
+        font-size: 2.3vw;
+        line-height: 3.6vw;
+        margin-bottom: 1.5vw;
+    }
+    .goodtxt h1{
+        font-size: 4.7vw;
+        line-height: 5.2vw;
+    }
+    .goodtxt p{
+        font-size: 2.3vw;
+        margin-bottom: 2vw;
+        margin-top: 5.2vw;
+        line-height: 3.6vw;
+    }
+    .sleep{
+        position: absolute;
+        top:70vw;
+        left: 4vw;
+        width: 42.4vw;
+        height: 51.111vw;
+
+    }
+    .nurse{
+        height: 60.6vw;
+        width: 47vw;
+        top: 90vw;
+        left: 50vw;
+    }
+    .dude{
+        height: 150vw;
+    }
+    .number{
+        width: 10vw;
+        padding-right: 2vw;
+    }
+    .listhead{
+        justify-content: left;
+    }
+    .wiggle{
+        margin-top: 0;
+    }
+    .close-accord{
+        margin-left: 26vw;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+    .close-accord2{
+        margin-left: 11vw;
+        height: 1.2rem;
+        width: 1.2rem;
+    } .close-accord3{
+        margin-left: 17.1vw;
+        height: 1.2rem;
+        width: 1.2rem;
+    } 
+    .close-accord4{
+        height: 1.2rem;
+        width: 1.2rem;
+        margin-left: 38.7vw;
+    }
+    .accordian li label{
+        margin-top: 0;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        line-height: 2.5rem;
+        font-weight: 700.01;
+        cursor: pointer;
+        font-family: Baton Turbo,Arial,sans-serif;
+        
+    }
+}
 @media(max-width: 620px){
     .desc{
         animation-duration: .5s;
@@ -432,15 +899,62 @@ header{
             display: none;
         }
         .delivery, .floats, .campaigns, .creative{
-            text-align: center;
+            text-align: left;
+            font-size: 13.5vw;
+        }
+        .logo{
+            border-right-style: none;
+        }
+        .create img{
+            left: 65vw;
+            height: 27.1vw;
+            width: 28vw;
+            top: 5vw;
+        }
+        .items{
+            font-size: 4.5vw;
+            margin-top: 10.1vw;
+            line-height: 3vw;
+            padding-bottom: 8vw;
+            padding-left: 4vw;
+            padding-right: 4vw;
+
+
+        }
+        .menu li{
+            margin-top: 5vw;
+        }
+        .close-menu{
+            font-size: 3vw;
         }
         .menu{
             width: 90%;
         }
-        .sunglass{
+        .sunglass img{
             display: none;
         }
+        .sunglass {
+            position: absolute;
+            width: 100vw;
+            left: 0;
+            padding-right: 30vw;
+            top: 0;
+            margin-top: 0;
+        }
+        .sunglass p{
+            font-size: 2.6vw;
+            font-weight: 500;
+            line-height: 3.178vw;
+        }
         .givenchy{
+            margin-top: 5vw;
+            position: relative;
+            top: 10vw;
+            height: 60vw;
+            width: 90vw;
+            left: 0;
+        }
+        footer{
             display: none;
         }
     }
