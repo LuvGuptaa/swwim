@@ -140,6 +140,7 @@ header{
 }
 .logo_desc{
     overflow: hidden;
+    font-family: Baton Turbo,Arial,sans-serif;;
 }
 .desc{
     font-size:.875rem;
@@ -191,7 +192,7 @@ header{
     width: 100%;
     height: 100%;
     transform: scaleY(0);
-    transform-origin: bottom center;
+    transform-origin: bottom;
     background-color: rgba(13, 60, 136,1);
     z-index: -10;
     transition: transform 0.5s;
@@ -211,6 +212,7 @@ header{
 .contact:hover:visited{
     color: white;
 }
+
 .menulist{
     
     align-items: center;
@@ -220,11 +222,12 @@ header{
     padding-bottom: .5rem;
 }
 .menu{
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    height: 100%;
+    width: 65%;
+    height: 100vh;
     position: fixed;
     top: 0;
     right: -100%;
@@ -236,32 +239,44 @@ header{
     display: none;
 }
 
-.menu li {margin-top: 40px;}
+.menu li {margin-top: 20px;}
 .menu li a {padding: 10px;}
 .open-menu , .close-menu {display: block;}
 .items{
     margin-top: 5rem;
-    padding-top: 5vh;
-    line-height: 1.5rem;
+    padding-top: 3vh;
+    line-height: 2.5rem;
     font-size: 2.25rem;
     font-weight: 700;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
+}
+.girl{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    right: 0;
+    position: absolute;
 }
 .open-menu , .close-menu {
     position: relative;
     color: rgb(229, 231, 235);
     cursor: pointer;
 }
-
+.open-menu:hover{
+    opacity: .7;
+}
 .close-menu {
     top: 20px;
     right: 40px;
     padding-top: 2rem;
     font-weight: 700;
 }
-#check:checked ~ .menu {right: 0;}
+#check:checked ~ .menu {right: 0;
+    overscroll-behavior: none;
+}
 
 
 .menu li {
@@ -274,22 +289,17 @@ header{
     text-decoration: none;
     color: rgb(229, 231, 235);
     text-align: center;
-    transition: 0.15s ease-in-out;
+    
     position: relative;
     text-transform: uppercase;
+    transition: all .05s ease-in-out;
+
 }
-.menu li a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: rgb(229, 231, 235);
-    transition: 0.15s ease-in-out;
+.menu li a:hover{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
 }
-.menu li a:hover:after {width: 100%;
-}
+
 
 
 .close-menu{
@@ -297,6 +307,9 @@ header{
     color: rgb(229, 231, 235);
     cursor: pointer;
     font-size: 1.5rem;
+}
+.close-menu:hover{
+    opacity: .6;
 }
 .hero{
     background-color: rgba(22,88,179,1);
@@ -384,6 +397,7 @@ header{
     font-weight: 700;
     position: relative;
     text-align: right;
+    
 }
 .flo{
     overflow: hidden;
@@ -453,12 +467,8 @@ header{
 }
 .dude{
     position: relative;
-    height: 135vw;
+    height: 125vw;
     width: 100vw;
-    border-top-style: solid;
-    border-top-width: 2px;
-    border-top-color: white;
-    margin-top: 2rem;
 }
 .good{
     display: inline-block;
@@ -596,7 +606,7 @@ header{
 }
 .bruh{
     position: relative;
-    height: 120vw;
+    height: auto;
     width: 100vw;
     margin-top: 2rem;
     background-color: white;
@@ -642,12 +652,19 @@ header{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     display: flex;
-    justify-content: space-between;
+}
+.tcenter{
+    display: flex;
+    z-index: -10;
+}
+.bino{
+    width: 3rem ;
+    height: 2rem;
 }
 .wiggle{
-    width: 2.5rem;
+    width: 3rem;
+    max-height: 2.8rem;
     line-height: 1.5rem;
-    margin-top: .75rem;
     margin-right: 1.25rem;
 }
 .cont:hover label{
@@ -685,7 +702,7 @@ header{
 .number{
     font-size: 1.875rem;
     line-height: 2.25rem;
-    width: 25%;
+    
     margin-top: -.25rem;
     font-weight: 710;
     padding-right: 10rem;
@@ -704,6 +721,7 @@ header{
     font-weight: 700.01;
     cursor: pointer;
     font-family: Baton Turbo,Arial,sans-serif;
+    margin-right: 1rem;
     
 }
 input[type="checkbox"]{
@@ -716,58 +734,65 @@ input[type="checkbox"]{
 }
 .accordian .content{
     width: 66.666667%;
-    margin-left: 25.2vw;
+    margin-left: 15rem;
     font-weight: 100;
     word-spacing: .3rem;
     font-size: 1.125rem;
     line-height: 1.75rem;
     max-width: 42rem;
+    margin-bottom: 3rem;
+    
+
+}
+.cont4{
+    margin-bottom: 3rem;
+}
+.hide{
     max-height: 0;
     overflow: hidden;
+}
+.hide p{
     transition: all .5s ease-in-out;
 }
 .close-accord{
-    width: 1.5rem;
-    height: 1.7rem;
+    width: 1.6rem;
+    height: 1.8rem;
     margin-top: .5rem;
-    margin-left: 2.75rem;
-    transition: transform .5s;
+    transition: all .5s;
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg);
 }
 .close-accord2{
-    width: 1.8rem;
-    height: 2rem;
+    width: 1.6rem;
+    height: 1.8rem;
     margin-top: .5rem;
-    margin-left: 2.75rem;
     transition: transform .5s;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
 }
 .close-accord3{
     width: 1.6rem;
     height: 1.8rem;
     margin-top: .5rem;
-    margin-left: 2.75rem;
     transition: transform .5s;
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg);
 }
 .close-accord4{
-    width: 1.9rem;
-    height: 2.1rem;
+    width: 1.6rem;
+    height: 1.8rem;
     margin-top: .5rem;
-    margin-left: 11.5rem;
+    position: absolute;
+    right: 0;
     transition: transform .5s;
-}
-#first:checked ~ .content {
-    max-height: 200px;
-}
-#first:checked ~ .close-accord {
     transform: rotate(45deg);
 }
-#second:checked ~ .close-accord2 {
-    transform: rotate(45deg);
-}#third:checked ~ .close-accord3 {
-    transform: rotate(45deg);
-}#fourth:checked ~ .close-accord4 {
-    transform: rotate(45deg);
+.rotating{
+    transform: rotate(0deg);
 }
-
 .luv{
     display: flex;
     justify-content: center;
@@ -808,6 +833,14 @@ input[type="checkbox"]{
         width: 83vw;
         height: 32vw;
     }
+    .girl{
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        right: 0;
+        position: absolute;
+    }
     .welcome{
         font-size: 2.3vw;
         line-height: 3.6vw;
@@ -841,12 +874,12 @@ input[type="checkbox"]{
         height: 150vw;
     }
     .number{
-        width: 10vw;
-        padding-right: 2vw;
+        width: 60px;
+        padding-right: 1vw;
+        font-size: 1.5rem;
+        transition: all .5s ease-in-outs;
     }
-    .listhead{
-        justify-content: left;
-    }
+    
     .wiggle{
         margin-top: 0;
     }
@@ -854,33 +887,84 @@ input[type="checkbox"]{
         margin-left: 26vw;
         height: 1.2rem;
         width: 1.2rem;
+        transform: rotate(45deg);
     }
     .close-accord2{
         margin-left: 11vw;
         height: 1.2rem;
         width: 1.2rem;
+        transform: rotate(45deg);
+
     } .close-accord3{
         margin-left: 17.1vw;
         height: 1.2rem;
         width: 1.2rem;
+        transform: rotate(45deg);
+
     } 
     .close-accord4{
         height: 1.2rem;
         width: 1.2rem;
         margin-left: 38.7vw;
+        transform: rotate(45deg);
+    }
+    .rotating{
+        transform: rotate(0deg);
     }
     .accordian li label{
         margin-top: 0;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
         line-height: 2.5rem;
-        font-weight: 700.01;
+        font-weight: 700;
         cursor: pointer;
         font-family: Baton Turbo,Arial,sans-serif;
-        
+        transition: all .5s ease-in-out;
+
+    }
+    .dash{
+        margin-left: 0;
+    }
+    .dash img{
+        width: 14rem;
+        opacity: 1;
+    }
+    .serve{
+        font-size: .9rem;
+        margin-bottom: 2rem;
+        transition: all .5s ease-in-out;
+
+    }
+    .serve h2{
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        font-weight: 700;
+        transition: all .5s ease-in-out;
+
+
+    }
+    .listhead{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        transition: all .5s ease-in-out;
+    }
+    .accordian .content{
+        margin-left: 0;
+        width: 100%;
+        font-size: 1rem;
+    }
+    .wiggle{
+        margin-top: .25rem;
+        width: 2rem;
+        max-height: 1.75rem;
+    }
+    .bino{
+        max-height: 1.5rem;
+        margin-top: .25rem;
+        width: 2rem;
     }
 }
-@media(max-width: 620px){
+@media(max-width: 768px){
     .desc{
         animation-duration: .5s;
         animation-fill-mode: both;
@@ -918,8 +1002,6 @@ input[type="checkbox"]{
             padding-bottom: 8vw;
             padding-left: 4vw;
             padding-right: 4vw;
-
-
         }
         .menu li{
             margin-top: 5vw;
@@ -954,9 +1036,7 @@ input[type="checkbox"]{
             width: 90vw;
             left: 0;
         }
-        footer{
-            display: none;
-        }
+        
     }
 @media(max-width: 510px){
     .desc{
